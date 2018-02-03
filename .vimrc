@@ -39,6 +39,8 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'suan/vim-instant-markdown'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'bling/vim-airline'
+""Bundle 'sickill/vim-monokai'
+Bundle 'tomasr/molokai'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
@@ -129,7 +131,7 @@ set mat=2
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlight
 syntax enable
-:colorscheme molokai
+colorscheme molokai
 set background=dark
 :set t_Co=256
 
