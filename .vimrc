@@ -1,51 +1,73 @@
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'taglist.vim'
+Plugin 'bufexplorer.zip'
+Plugin 'The-NERD-tree'
+Plugin 'winmanager'
+Plugin 'genutils'
+Plugin 'lookupfile'
+Plugin 'vim-signature'
+Plugin 'nathanaelkane/vim-indent-guides'
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'SuperTab'
+Plugin 'snipMate'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'a.vim'
+Plugin 'c.vim'
+Plugin 'Conque-Shell'
+Plugin 'vimwiki'
+
+
+Plugin 'DoxygenToolkit.vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'taglist.vim'
-Bundle 'bufexplorer.zip'
-Bundle 'The-NERD-tree'
-Bundle 'winmanager'
-Bundle 'genutils'
-Bundle 'lookupfile'
-Bundle 'vim-signature'
-Bundle 'nathanaelkane/vim-indent-guides'
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'SuperTab'
-Bundle 'snipMate'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'a.vim'
-Bundle 'c.vim'
-Bundle 'Conque-Shell'
-Bundle 'vimwiki'
+""Plugin 'ManPageView'
+Plugin 'calendar.vim'
+Plugin 'AutoClose'
 
-
-Bundle 'DoxygenToolkit.vim'
+Plugin 'scrooloose/nerdcommenter'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""Bundle 'ManPageView'
-Bundle 'calendar.vim'
-Bundle 'AutoClose'
-
-Bundle 'scrooloose/nerdcommenter'
-
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'suan/vim-instant-markdown'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'godlygeek/tabular'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'suan/vim-instant-markdown'
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'bling/vim-airline'
-""Bundle 'sickill/vim-monokai'
-Bundle 'tomasr/molokai'
+Plugin 'bling/vim-airline'
+""Plugin 'sickill/vim-monokai'
+Plugin 'tomasr/molokai'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible
 " Set how many lines of history VIM has to rememer
 set history=800
 
