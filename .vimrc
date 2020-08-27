@@ -46,7 +46,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'suan/vim-instant-markdown'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
 ""Plugin 'sickill/vim-monokai'
 Plugin 'tomasr/molokai'
 
@@ -92,7 +92,7 @@ nmap <leader>w :w!<cr>
 nmap <leader>q :q!<cr>
 
 " fast editing
-nmap <leader>aq :qa<cr>
+nmap <leader>qa :qa<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim user interface
@@ -200,10 +200,14 @@ map j gj
 map k gk
 
 " Smart way to move between windows
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-h> <C-w>h
-map <C-l> <C-w>l
+map <leader>j <C-w>j
+map <leader>k <C-w>k
+map <leader>h <C-w>h
+map <leader>l <C-w>l
+
+" Move between buffers
+map <C-l> :bn<CR>
+map <C-h> :bp<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Status line
@@ -347,11 +351,9 @@ function! NERDTree_IsValid()
 endfunction 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Config Powerline
+" Config Airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""let g:Powerline_theme = 'solarized256'
-""let g:Powerline_colorscheme = 'solarized256'
-""let g:Powerline_symbols = "fancy"
+let g:airline#extensions#tabline#enable = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Config SuperTab and SnipMate, avoid conflit
