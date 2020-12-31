@@ -353,7 +353,12 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Config Airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline#extensions#tabline#enable = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+""let g:airline#extensions#tabline#show_splits = 1
+""let g:airline#extensions#tabline#show_tabs = 1
+""let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Config SuperTab and SnipMate, avoid conflit
@@ -386,8 +391,6 @@ let g:DoxygenToolkit_briefTag_funcName = "yes"
 let g:DoxygenToolkit_authorName = "Qian Gu, guqian110@gmail.com"
 let g:doxygen_enhanced_color = 1
 "let g:load_doxygen_syntax = 1
-
-let g:airline#extensions#tabline#enable = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Config lookupfile
