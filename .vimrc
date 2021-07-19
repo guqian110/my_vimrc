@@ -47,6 +47,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'suan/vim-instant-markdown'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'vim-airline/vim-airline'
+Plugin 'editorconfig/editorconfig-vim'
 ""Plugin 'sickill/vim-monokai'
 Plugin 'tomasr/molokai'
 
