@@ -110,8 +110,8 @@ set wildignore=*.o,*~,*.pyc
 " Always show current postion
 set ruler
 
-set cc=80
-:set tw=80
+set cc=100
+set tw=100
 
 " Highlight current line
 set cursorline
@@ -187,7 +187,7 @@ set tabstop=4
 
 " Linebreak on 500 characters
 set lbr
-set tw=500
+set tw=100
 
 set ai "Auto indent
 set si "Smart indent
@@ -220,6 +220,15 @@ set laststatus=2
 " Always show the status line
 " set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 ""set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Trim trailing whitespace on certain filetype
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Highlight
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+" Auto trime
+autocmd FileType c,cpp,python,systemverilog autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Spell checking
@@ -339,17 +348,17 @@ let NERDChristmasTree=1
 "let g:winManagerWindowLayout = "NERDTree|FileExplorer|TagList"
 "let g:winManagerWindowLayout = "NERDTree,BufExplorer|TagList"
 let g:winManagerWindowLayout="NERDTree|TagList"
-let g:NERDTree_title="[NERDTree]"  
+let g:NERDTree_title="[NERDTree]"
 
-nmap <C-m> :WMToggle<CR> 
+nmap <C-m> :WMToggle<CR>
 
-function! NERDTree_Start()  
-    exec 'NERDTree'  
-endfunction  
-      
-function! NERDTree_IsValid()  
-    return 1  
-endfunction 
+function! NERDTree_Start()
+    exec 'NERDTree'
+endfunction
+
+function! NERDTree_IsValid()
+    return 1
+endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Config Airline
@@ -364,7 +373,7 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Config SuperTab and SnipMate, avoid conflit
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:SuperTabMappingForward="<tab>" 
+let g:SuperTabMappingForward="<tab>"
 
 " config superTab
 "let g:SuperTabDefaultCompletionType="context"
@@ -420,12 +429,12 @@ function! LookupFile_IgnoreCaseFunc(pattern)
     finally
         let &tags = _tags
     endtry
-                    
+
     " Show the matches for what is typed so far.
     let files = map(tags, 'v:val["filename"]')
     return files
 endfunction
-let g:LookupFile_LookupFunc = 'LookupFile_IgnoreCaseFunc' 
+let g:LookupFile_LookupFunc = 'LookupFile_IgnoreCaseFunc'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""
